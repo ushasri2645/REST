@@ -121,7 +121,7 @@ app.delete('/providers/:id', (req, res) => {
 
 
 //TASK3 - USER COOSHING A  PROVIDER -SUBSCRIBING
-app.post('/users/:id/subscribe',(req,res)=>{
+app.post('/users/:id/providerSubscription',(req,res)=>{
     const id = req.params.id;
     const user =findById(users,id)
     const providerId = req.body.providerId;
@@ -160,7 +160,7 @@ app.get('/meters/:id/readdings',(req,res)=>{
     }
 })
 
-app.post('/user/:id/addmeter',(req,res)=>{
+app.post('/user/:id/meterSubscription',(req,res)=>{
     const id = req.params.id;
     const user =findById(users,id);
     const meterId = req.body.meterId
