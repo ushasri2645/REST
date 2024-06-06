@@ -136,11 +136,14 @@ curl -X POST http://localhost:4000/providers -H "Content-Type: application/json"
 
 //subcsribe
 
-curl -X POST http://localhost:4000/users/1/subscribe -H "Content-Type: application/json" -d '{"providerId":1}'
+curl -X POST http://localhost:4000/users/1/providerSubscription -H "Content-Type: application/json" -d '{"providerId":1}'
 
 
 //meter create
 curl -X POST http://localhost:4000/meters -H "Content-Type: application/json" -d '{"name":"Meter1"}'
+//meter subcription
+curl -X POST http://localhost:4000/users/1/meterSubscription -H "Content-Type: application/json" -d '{"meterId":1}'
+
 //meter update
 
 curl -x PUT http://localhost:4000/meters -H "Content-Type: application/json" -d '{"meterId":1}'
